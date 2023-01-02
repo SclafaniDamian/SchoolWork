@@ -1,0 +1,8 @@
+// composition = "has a" - one class has object(s) of another class as data
+//                         members
+// inheritance = "is a" relationship - one class is a more specific version of
+//                                     an existing class
+//     base class - derived class
+//     parent class - child class
+//     ancestor - descendant
+

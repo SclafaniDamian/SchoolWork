@@ -1,0 +1,14 @@
+temp.o : temp.cc temp.h
+	g++ -std=c++17 -Wall -I . -c temp.cc
+
+sept29.o : sept29.cc temp.h
+	g++ -std=c++17 -Wall -I . -c sept29.cc
+
+sept29 : sept29.o temp.o temp.h
+	g++ -std=c++17 -Wall sept29.o temp.o -o sept29
+
+test : sept29
+	./sept29
+
+clean :
+	rm *.o sept29

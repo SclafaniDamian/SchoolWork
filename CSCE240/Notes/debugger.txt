@@ -1,0 +1,22 @@
+gdb compiler:
+
+when compiling your code, add the -g option
+e.g. g++ -std=c++17 -Wall -g mycode.cc -o mycode
+
+to run the debugger type gdb followed by the name of your executable
+e.g. gdb mycode
+
+You can add break points to your code by typing break or b followed by
+a linenumber or function name
+e.g. b 27
+
+To run your code up to the breakpoint, type run
+
+Type next or n to execute the next operation
+Type step or s to step into a function
+Type continue or c to continue the program untill the next breakpoint 
+
+To view the value of a variable at the current point, type pring variablename
+e.g. print x
+
+To exit at any point type quit

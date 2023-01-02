@@ -1,0 +1,32 @@
+# makefile for our average functions, tests, etc
+flags = -std=c++17  # use the 2017 C++ standards
+flags += -Wall      # show all warnings
+flags += -I .       # have the compiler look in the current directory
+                    # for includes
+compile = g++ $(flags) -c  # -c says compile only
+link = g++ $(flags) -o # come back to this shortly
+
+# recall $< is the first prerequisite
+average_functions.o : average_functions.cc average_functions.h
+	$(compile) $<
+
+test_average_double_double_double.o : test_average_double_double_double.cc average_functions.h
+	$(compile) $<
+
+# $@ = target, $^ = all prerequisites
+test_average_double_double_double : test_average_double_double_double.o average_functions.o
+	$(link) $@ $^
+
+sept13.o : sept13.cc average_functions.h
+	$(compile) $<
+
+sept13 : sept13.o average_functions.o
+	$(link) $@ $^
+
+run_tests : test_average_double_double_double sept13
+	./test_average_double_double_double
+	./sept13
+
+clean :
+	rm *.o test_average_double_double_double sept13
+

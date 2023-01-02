@@ -1,0 +1,24 @@
+---Logging In---
+ssh -p222 damians@L-1D43-01.cse.sc.edu
+
+
+---Single_File_Programs---
+g++ -std=c++17 programName.cc -c test
+g++ -std=c++17 programName.cc -o test
+
+./test
+
+
+---Multi-File_Programs---
+g++ -std=c++17 -Wall -I . -c programName.cc
+
+g++ -std=c++17 -Wall -I . programName.cc programName2.cc -o test 	//links files
+g++ -std=c++17 -Wall -I . (file with main(NOT HEADER!)) -o test
+
+./test
+
+
+---Python_Testing---
+python3 test_program.py
+
+cpplint program.cc

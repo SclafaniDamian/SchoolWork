@@ -1,0 +1,12 @@
+book.o : book.cc book.h
+	g++ -std=c++17 -Wall -I . -c book.cc
+
+booktest.o : booktest.cc book.h
+	g++ -std=c++17 -Wall -I . -c booktest.cc
+
+booktest : booktest.o book.o
+	g++ -std=c++17 -Wall booktest.o book.o -o booktest
+	./booktest
+
+clean :
+	rm *.o booktest

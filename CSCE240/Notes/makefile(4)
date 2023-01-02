@@ -1,0 +1,14 @@
+temp.o : temp.cc temp.h
+	g++ -std=c++17 -Wall -I . -c temp.cc
+
+oct4.o : oct4.cc temp.h
+	g++ -std=c++17 -Wall -I . -c oct4.cc
+
+oct4 : oct4.o temp.o temp.h
+	g++ -std=c++17 -Wall oct4.o temp.o -o oct4
+
+test : oct4
+	./oct4
+
+clean :
+	rm *.o oct4
