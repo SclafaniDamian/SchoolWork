@@ -3,10 +3,11 @@ package CSCE145AND146;
 import java.util.Scanner;
 
 public class chooseAdventure {
+	private Scanner key;
     
     public void CYOAdventure() {
         //Scanner
-		Scanner key = new Scanner(System.in);
+		key = new Scanner(System.in);
         // variables
         String choice = "none";
 		String inventory1 = "nothing";
