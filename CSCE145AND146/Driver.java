@@ -4,12 +4,15 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[2];
+    private String[] options = new String[5];
 
     public Driver() {
         scanner = new Scanner(System.in);
         options[0] = "Quit";
         options[1] = "Choose Your Own Adventure";
+        options[2] = "Payroll";
+        options[3] = "Rock Paper Scissors";
+        options[4] = "Apple";
     }
 
     public void runDriver() {
@@ -27,6 +30,18 @@ public class Driver {
                 case 1:
                     chooseAdventure CYO = new chooseAdventure();
                     CYO.CYOAdventure();
+                    break;
+                case 2:
+                    Payroll payroll = new Payroll();
+                    payroll.checkPayroll();
+                    break;
+                case 3:
+                    RockPaperScissors RPS = new RockPaperScissors();
+                    RPS.RPS();
+                    break;
+                case 4:
+                    AppleTester aTest = new AppleTester();
+                    aTest.testApple();
                     break;
             }
         }
