@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[5];
+    private String[] options = new String[6];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -13,6 +13,7 @@ public class Driver {
         options[2] = "Payroll";
         options[3] = "Rock Paper Scissors";
         options[4] = "Apple";
+        options[5] = "Word Sorter //NEEDS FIXED!!!";
     }
 
     public void runDriver() {
@@ -42,6 +43,10 @@ public class Driver {
                 case 4:
                     AppleTester aTest = new AppleTester();
                     aTest.testApple();
+                    break;
+                case 5:
+                    WordSorterFrontEnd wsfe = new WordSorterFrontEnd();
+                    wsfe.frontEnd();
                     break;
             }
         }
