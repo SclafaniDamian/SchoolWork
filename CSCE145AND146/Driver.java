@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[18];
+    private String[] options = new String[19];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -26,6 +26,7 @@ public class Driver {
         options[15] = "Video Game Database";
         options[16] = "Fleet of Vehicles";
         options[17] = "Vector";
+        options[18] = "Taco";
     }
 
     public void runDriver() {
@@ -106,6 +107,10 @@ public class Driver {
                 case 17:
                     VectorMain vector = new VectorMain();
                     vector.VectorMainMethod();
+                    break;
+                case 18:
+                    TacoDemo taco = new TacoDemo();
+                    taco.TacoDemoMain();
                     break;
             }
         }
