@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[6];
+    private String[] options = new String[15];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -14,6 +14,15 @@ public class Driver {
         options[3] = "Rock Paper Scissors";
         options[4] = "Apple";
         options[5] = "Word Sorter //NEEDS FIXED!!!";
+        options[6] = "Book";
+        options[7] = "Decision Game";
+        options[8] = "Drivers License Eligibility";
+        options[9] = "Even Or Not";
+        options[10] = "Outdoor Exercise";
+        options[11] = "Positive Or Not";
+        options[12] = "Sports";
+        options[13] = "String Methods";
+        options[14] = "User Input";
     }
 
     public void runDriver() {
@@ -47,6 +56,42 @@ public class Driver {
                 case 5:
                     WordSorterFrontEnd wsfe = new WordSorterFrontEnd();
                     wsfe.frontEnd();
+                    break;
+                case 6:
+                    BookDemo bDem = new BookDemo();
+                    bDem.bDemo();
+                    break;
+                case 7:
+                    DecisionGame decision = new DecisionGame();
+                    decision.game();
+                    break;
+                case 8:
+                    DriversLicenseEligibility DLE = new DriversLicenseEligibility();
+                    DLE.dle();
+                    break;
+                case 9:
+                    EvenOrNot EoN = new EvenOrNot();
+                    EoN.evenornot();
+                    break;
+                case 10:
+                    OutdoorExercise outdoor = new OutdoorExercise();
+                    outdoor.outdoors();
+                    break;
+                case 11:
+                    PositiveOrNot pos = new PositiveOrNot();
+                    pos.PosOrNot();
+                    break;
+                case 12:
+                    Sports sports = new Sports();
+                    sports.sport();
+                    break;
+                case 13:
+                    StringMethods stringMethod = new StringMethods();
+                    stringMethod.stringMethod();
+                    break;
+                case 14:
+                    UserInput userInp = new UserInput();
+                    userInp.userinp();
                     break;
             }
         }
