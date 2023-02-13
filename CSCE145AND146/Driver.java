@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[15];
+    private String[] options = new String[16];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -23,6 +23,7 @@ public class Driver {
         options[12] = "Sports";
         options[13] = "String Methods";
         options[14] = "User Input";
+        options[15] = "Video Game Database";
     }
 
     public void runDriver() {
@@ -92,6 +93,10 @@ public class Driver {
                 case 14:
                     UserInput userInp = new UserInput();
                     userInp.userinp();
+                    break;
+                case 15:
+                    VideoGameFrontEnd videoGame = new VideoGameFrontEnd();
+                    videoGame.videogame();
                     break;
             }
         }
