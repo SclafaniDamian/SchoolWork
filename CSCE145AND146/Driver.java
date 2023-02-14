@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[24];
+    private String[] options = new String[25];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -32,6 +32,7 @@ public class Driver {
         options[21] = "Products";
         options[22] = "Pick A Card";
         options[23] = "Pets";
+        options[24] = "Fun With Variables";
     }
 
     public void runDriver() {
@@ -136,6 +137,10 @@ public class Driver {
                 case 23:
                     PetDemo pets = new PetDemo();
                     pets.PetDemoMain();
+                    break;
+                case 24:
+                    FunWithVariables variablesFun = new FunWithVariables();
+                    variablesFun.FunWithVariablesMain();
                     break;
             }
         }
