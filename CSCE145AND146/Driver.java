@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[23];
+    private String[] options = new String[24];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -31,6 +31,7 @@ public class Driver {
         options[20] = "Showcase Showdown //NEEDS FIXED";
         options[21] = "Products";
         options[22] = "Pick A Card";
+        options[23] = "Pets";
     }
 
     public void runDriver() {
@@ -131,6 +132,10 @@ public class Driver {
                 case 22:
                     PickACardFE deck = new PickACardFE();
                     deck.PickACardFEMain();
+                    break;
+                case 23:
+                    PetDemo pets = new PetDemo();
+                    pets.PetDemoMain();
                     break;
             }
         }
