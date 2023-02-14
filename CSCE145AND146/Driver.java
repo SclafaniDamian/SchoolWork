@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[28];
+    private String[] options = new String[29];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -36,6 +36,7 @@ public class Driver {
         options[25] = "Double Double Linked List";
         options[26] = "Dimension Converter";
         options[27] = "CSCE146 Exam Question 1";
+        options[28] = "CSCE146 Exam Question 2";
     }
 
     public void runDriver() {
@@ -155,6 +156,9 @@ public class Driver {
                     break;
                 case 27:
                     Question01.Question01Main();
+                    break;
+                case 28:
+                    Question02.Question02Main();
                     break;
             }
         }
