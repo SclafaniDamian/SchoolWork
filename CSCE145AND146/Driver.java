@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[25];
+    private String[] options = new String[26];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -33,6 +33,7 @@ public class Driver {
         options[22] = "Pick A Card";
         options[23] = "Pets";
         options[24] = "Fun With Variables";
+        options[25] = "Double Double Linked List";
     }
 
     public void runDriver() {
@@ -141,6 +142,10 @@ public class Driver {
                 case 24:
                     FunWithVariables variablesFun = new FunWithVariables();
                     variablesFun.FunWithVariablesMain();
+                    break;
+                case 25:
+                    DoubleLinkedListTester doubledoublelinkedlist = new DoubleLinkedListTester();
+                    doubledoublelinkedlist.DoubleLinkedListTesterMain();
                     break;
             }
         }
