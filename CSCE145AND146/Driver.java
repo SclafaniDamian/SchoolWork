@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[32];
+    private String[] options = new String[33];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -40,6 +40,7 @@ public class Driver {
         options[29] = "CSCE146 Exam Question 3";
         options[30] = "Box";
         options[31] = "Bubble Sorter";
+        options[32] = "Coffee";
     }
 
     public void runDriver() {
@@ -173,6 +174,10 @@ public class Driver {
                 case 31:
                     BubbleSorterComplete bubbsort = new BubbleSorterComplete();
                     bubbsort.BubbleSorterCompleteMain();
+                    break;
+                case 32:
+                    CoffeeTester coffee = new CoffeeTester();
+                    coffee.CoffeeTesterMain();
                     break;
             }
         }
