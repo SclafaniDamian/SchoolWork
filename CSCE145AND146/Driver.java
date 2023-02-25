@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[34];
+    private String[] options = new String[37];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -35,13 +35,16 @@ public class Driver {
         options[24] = "Fun With Variables";
         options[25] = "Double Double Linked List";
         options[26] = "Dimension Converter";
-        options[27] = "CSCE146 Exam Question 1";
-        options[28] = "CSCE146 Exam Question 2";
-        options[29] = "CSCE146 Exam Question 3";
+        options[27] = "CSCE Exam Question 1";
+        options[28] = "CSCE Exam Question 2";
+        options[29] = "CSCE Exam Question 3";
         options[30] = "Box";
         options[31] = "Bubble Sorter";
         options[32] = "Coffee";
         options[33] = "Concert";
+        options[34] = "CSCE146 Exam Question 1";
+        options[35] = "CSCE146 Exam Question 2";
+        options[36] = "CSCE146 Exam Question 3";
     }
 
     public void runDriver() {
@@ -183,6 +186,18 @@ public class Driver {
                 case 33:
                     ConcertPromoter concert = new ConcertPromoter();
                     concert.ConcertPromoterMain();
+                    break;
+                case 34:
+                    CSCE146Question01 csce146question01 = new CSCE146Question01();
+                    csce146question01.CSCE146Question01Main();
+                    break;
+                case 35:
+                    CSCE146Question02 csce146question02 = new CSCE146Question02();
+                    csce146question02.CSCE146Question02Main();
+                    break;
+                case 36:
+                    CSCE146Question03 csce146question03 = new CSCE146Question03();
+                    csce146question03.CSCE146Question03Main();
                     break;
             }
         }
