@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[38];
+    private String[] options = new String[39];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -46,6 +46,7 @@ public class Driver {
         options[35] = "CSCE146 Exam Question 2";
         options[36] = "CSCE146 Exam Question 3";
         options[37] = "Ships";
+        options[38] = "LinkedBST";
     }
 
     public void runDriver() {
@@ -203,6 +204,10 @@ public class Driver {
                 case 37:
                     ShipNavigator ships = new ShipNavigator();
                     ships.ShipNavigatorMain();
+                    break;
+                case 38:
+                    Tester linkedBST = new Tester();
+                    linkedBST.TesterLinkedBSTMain();
                     break;
             }
         }
