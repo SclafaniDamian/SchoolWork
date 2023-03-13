@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[44];
+    private String[] options = new String[46];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -52,6 +52,8 @@ public class Driver {
         options[41] = "Fun Sorting Example";
         options[42] = "Searching Algorithms";
         options[43] = "Towers of Hanoi";
+        options[44] = "SierpinskisCarpet";
+        options[45] = "Simple Recursion";
     }
 
     public void runDriver() {
@@ -233,6 +235,14 @@ public class Driver {
                 case 43:
                     TowersOfHanoi hanoi = new TowersOfHanoi();
                     hanoi.TowersOfHanoiMain();
+                    break;
+                case 44:
+                    SierpinskisCarpet sierpinski = new SierpinskisCarpet();
+                    sierpinski.SierpinskisCarpetMain();
+                    break;
+                case 45:
+                    SimpleRecursion simplerecursion = new SimpleRecursion();
+                    simplerecursion.SimpleRecursionMain();
                     break;
             }
         }
