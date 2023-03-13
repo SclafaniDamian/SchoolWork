@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[41];
+    private String[] options = new String[44];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -49,6 +49,9 @@ public class Driver {
         options[38] = "LinkedBST";
         options[39] = "Min Heap";
         options[40] = "Max Heap";
+        options[41] = "Fun Sorting Example";
+        options[42] = "Searching Algorithms";
+        options[43] = "Towers of Hanoi";
     }
 
     public void runDriver() {
@@ -218,6 +221,18 @@ public class Driver {
                 case 40:
                     Tester maxheap = new Tester();
                     maxheap.MaxHeapTester();
+                    break;
+                case 41:
+                    FunLittleExample funlittleexample = new FunLittleExample();
+                    funlittleexample.FunLittleExampleMain();
+                    break;
+                case 42:
+                    SearchAlgorithms searchalgorithms = new SearchAlgorithms();
+                    searchalgorithms.SearchAlgorithmsMain();
+                    break;
+                case 43:
+                    TowersOfHanoi hanoi = new TowersOfHanoi();
+                    hanoi.TowersOfHanoiMain();
                     break;
             }
         }
