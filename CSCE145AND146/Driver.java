@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[39];
+    private String[] options = new String[41];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -47,6 +47,8 @@ public class Driver {
         options[36] = "CSCE146 Exam Question 3";
         options[37] = "Ships";
         options[38] = "LinkedBST";
+        options[39] = "Min Heap";
+        options[40] = "Max Heap";
     }
 
     public void runDriver() {
@@ -208,6 +210,14 @@ public class Driver {
                 case 38:
                     Tester linkedBST = new Tester();
                     linkedBST.TesterLinkedBSTMain();
+                    break;
+                case 39:
+                    MinHeapTester minheap = new MinHeapTester();
+                    minheap.MinHeapTesterMain();
+                    break;
+                case 40:
+                    Tester maxheap = new Tester();
+                    maxheap.MaxHeapTester();
                     break;
             }
         }
