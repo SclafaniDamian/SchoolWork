@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[46];
+    private String[] options = new String[47];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -54,6 +54,7 @@ public class Driver {
         options[43] = "Towers of Hanoi";
         options[44] = "SierpinskisCarpet";
         options[45] = "Simple Recursion";
+        options[46] = "Robot Commands (UNFINISHED)";
     }
 
     public void runDriver() {
@@ -243,6 +244,10 @@ public class Driver {
                 case 45:
                     SimpleRecursion simplerecursion = new SimpleRecursion();
                     simplerecursion.SimpleRecursionMain();
+                    break;
+                case 46:
+                    RobotCommandsFE robotcommands = new RobotCommandsFE();
+                    robotcommands.RobotCommandsFEMain();
                     break;
             }
         }
