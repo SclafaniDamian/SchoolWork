@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[47];
+    private String[] options = new String[48];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -55,6 +55,7 @@ public class Driver {
         options[44] = "SierpinskisCarpet";
         options[45] = "Simple Recursion";
         options[46] = "Robot Commands (UNFINISHED)";
+        options[47] = "Triangles Fractals";
     }
 
     public void runDriver() {
@@ -248,6 +249,10 @@ public class Driver {
                 case 46:
                     RobotCommandsFE robotcommands = new RobotCommandsFE();
                     robotcommands.RobotCommandsFEMain();
+                    break;
+                case 47:
+                    TrianglesFractals trianglesfractals = new TrianglesFractals();
+                    trianglesfractals.TrianglesFractalsMain();
                     break;
             }
         }
