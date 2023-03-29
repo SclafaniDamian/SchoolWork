@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[48];
+    private String[] options = new String[49];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class Driver {
         options[2] = "Payroll";
         options[3] = "Rock Paper Scissors";
         options[4] = "Apple";
-        options[5] = "Word Sorter //NEEDS FIXED!!!";
+        options[5] = "Word Sorter (FILE ERROR)";
         options[6] = "Book";
         options[7] = "Decision Game";
         options[8] = "Drivers License Eligibility";
@@ -28,7 +28,7 @@ public class Driver {
         options[17] = "Vector";
         options[18] = "Taco";
         options[19] = "Species";
-        options[20] = "Showcase Showdown //NEEDS FIXED";
+        options[20] = "Showcase Showdown (FILE ERROR))";
         options[21] = "Products";
         options[22] = "Pick A Card";
         options[23] = "Pets";
@@ -54,8 +54,9 @@ public class Driver {
         options[43] = "Towers of Hanoi";
         options[44] = "SierpinskisCarpet";
         options[45] = "Simple Recursion";
-        options[46] = "Robot Commands (UNFINISHED)";
+        options[46] = "Robot Commands (FILE ERROR)";
         options[47] = "Triangles Fractals";
+        options[48] = "Shapes";
     }
 
     public void runDriver() {
@@ -253,6 +254,10 @@ public class Driver {
                 case 47:
                     TrianglesFractals trianglesfractals = new TrianglesFractals();
                     trianglesfractals.TrianglesFractalsMain();
+                    break;
+                case 48:
+                    ShapesDemo shapes = new ShapesDemo();
+                    shapes.ShapesDemoMain();
                     break;
             }
         }
