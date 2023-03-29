@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[49];
+    private String[] options = new String[50];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -57,6 +57,7 @@ public class Driver {
         options[46] = "Robot Commands (FILE ERROR)";
         options[47] = "Triangles Fractals";
         options[48] = "Shapes";
+        options[49] = "Process Queue";
     }
 
     public void runDriver() {
@@ -258,6 +259,10 @@ public class Driver {
                 case 48:
                     ShapesDemo shapes = new ShapesDemo();
                     shapes.ShapesDemoMain();
+                    break;
+                case 49:
+                    ProcessSchedulerSimulator processqueue = new ProcessSchedulerSimulator();
+                    processqueue.ProcessSchedulerSimulatorMain();
                     break;
             }
         }
