@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[50];
+    private String[] options = new String[51];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -58,6 +58,7 @@ public class Driver {
         options[47] = "Triangles Fractals";
         options[48] = "Shapes";
         options[49] = "Process Queue";
+        options[50] = "Inheritance";
     }
 
     public void runDriver() {
@@ -263,6 +264,10 @@ public class Driver {
                 case 49:
                     ProcessSchedulerSimulator processqueue = new ProcessSchedulerSimulator();
                     processqueue.ProcessSchedulerSimulatorMain();
+                    break;
+                case 50:
+                    UgradDemo inheritance = new UgradDemo();
+                    inheritance.UgradDemoMain();
                     break;
             }
         }
