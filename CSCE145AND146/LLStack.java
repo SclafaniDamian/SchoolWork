@@ -14,6 +14,7 @@ public class LLStack <T> implements StackI<T> {
 		}
 	}
 	private ListNode head;
+	private int size;
 	public LLStack()
 	{
 		head = null;
@@ -22,14 +23,16 @@ public class LLStack <T> implements StackI<T> {
 	{
 		ListNode newNode = new ListNode(aData,head);
 		head = newNode;
+		size++;
 	}
 	public T pop()
 	{
 		if(head == null)
-		{
 			return null;
-		}
-		return head.data;
+		T ret = head.data;
+		head = head.link;
+		size--;
+		return ret;
 	}
 	public T peek()
 	{
@@ -41,5 +44,9 @@ public class LLStack <T> implements StackI<T> {
 	{
 		for(ListNode temp = head; temp != null; temp = temp.link)
 			System.out.println(temp.data);
+	}
+	public int size()
+	{
+		return this.size;
 	}
 }

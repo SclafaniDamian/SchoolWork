@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[52];
+    private String[] options = new String[53];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -60,6 +60,7 @@ public class Driver {
         options[49] = "Process Queue";
         options[50] = "Inheritance";
         options[51] = "Clock";
+        options[52] = "Reverse Polish Calculator";
     }
 
     public void runDriver() {
@@ -273,6 +274,10 @@ public class Driver {
                 case 51:
                     Clock24Tester clock = new Clock24Tester();
                     clock.Clock24TesterMain();
+                    break;
+                case 52:
+                    ReversePolishCalculatorFrontEnd revpolcalc = new ReversePolishCalculatorFrontEnd();
+                    revpolcalc.ReversePolishCalculatorFrontEndMain();
                     break;
             }
         }
