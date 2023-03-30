@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[59];
+    private String[] options = new String[60];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -67,6 +67,7 @@ public class Driver {
         options[56] = "Guess The Value";
         options[57] = "Matrix Multiplication";
         options[58] = "Selection Sort";
+        options[59] = "Calculator";
     }
 
     public void runDriver() {
@@ -308,6 +309,10 @@ public class Driver {
                 case 58:
                     SelectionSort selectsort = new SelectionSort();
                     selectsort.SelectionSortMain();
+                    break;
+                case 59:
+                    CalculatorDemo calculator = new CalculatorDemo();
+                    calculator.CalculatorDemoMain();
                     break;
             }
         }
