@@ -1,5 +1,8 @@
 // Made By Damian Sclafani
 package CSCE145AND146;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 
 public class LinkedBST <T extends Comparable<T>> {
     private class Node
@@ -59,6 +62,18 @@ public class LinkedBST <T extends Comparable<T>> {
 		System.out.println(aNode.data);//Process
 		printInorder(aNode.rightChild);//right
 	}
+	public void printPostorder()
+	{
+		printPostorder(root);
+	}
+	private void printPostorder(Node aNode)
+	{
+		if(aNode == null)
+			return;
+		printPostorder(aNode.leftChild);//left
+		printPostorder(aNode.rightChild);//right
+		System.out.println(aNode.data);//Process
+	}
 	public boolean search(T aData)
 	{
 		return search(root,aData);
@@ -111,5 +126,68 @@ public class LinkedBST <T extends Comparable<T>> {
 			return aNode;
 		else
 			return findMinInTree(aNode.leftChild);
+	}
+	public String findMaxArea()
+	{
+		return findMaxArea(root);
+	}
+	private String findMaxArea(Node aNode)
+	{
+		if(aNode == null)
+			return null;
+		else if(aNode.rightChild == null)
+			return aNode.data.toString();
+		else
+			return findMaxArea(aNode.rightChild);
+	}
+	public void removeShapesGreaterThan(T s)
+	{
+		removeShapesGreaterThan(root, s);
+	}
+	private Node removeShapesGreaterThan(Node aNode, T s)
+	{
+		if(aNode == null)
+			return null;
+		removeShapesGreaterThan(aNode.leftChild, s);
+		removeShapesGreaterThan(aNode.rightChild, s);
+		if(aNode.data.compareTo(s) > 0)
+		{
+			remove(aNode.data);
+			return aNode;
+		}
+		return aNode;
+	}
+	public String printPreorderFile()
+	{
+		if(root == null)
+		{
+			return "No Data";
+		}
+		return printPreorderFile(root);
+	}
+	
+	private String printPreorderFile(Node aNode)
+	{
+		if(aNode == null)
+		{
+			return "";
+		}
+		String tree1 = aNode.data.toString() + "\n";
+		tree1 += printPreorderFile(aNode.leftChild);
+		tree1 += printPreorderFile(aNode.rightChild);
+		return tree1;
+	}
+	public void writeFile(String aGame) //creates a new file
+	{
+		try
+		{
+			PrintWriter fileWriter = new PrintWriter(new FileOutputStream(new File(aGame)));
+			fileWriter.println(printPreorderFile());
+			fileWriter.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,10 +1,18 @@
 // Made By Damian Sclafani
 package CSCE145AND146;
 import java.util.Scanner;
-
+/*
+ * This set of code is any work I can pull from my freshman year Algorithmic Desing I & II classes.
+ * As of working on this, I am a sophomore.
+ * These works are all pulled from Eclipse. However, some of them
+ * do not read files the same way since I believe they read files
+ * differently.
+ * In summary, this is a collection of my early works with a UI
+ * that allows you to run any assignment from the same program.
+ */
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[70];
+    private String[] options = new String[71];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -78,6 +86,7 @@ public class Driver {
         options[67] = "Word Game";
         options[68] = "Diamond Drawer";
         options[69] = "Animal Inheritance";
+        options[70] = "Shape Tree (FILE ERROR)";
     }
 
     public void runDriver() {
@@ -363,6 +372,10 @@ public class Driver {
                 case 69:
                     AnimalFrontEnd animal = new AnimalFrontEnd();
                     animal.AnimalFrontEndMain();
+                    break;
+                case 70:
+                    ShapeTreeFE shapetree = new ShapeTreeFE();
+                    shapetree.ShapeTreeFEMain();
                     break;
             }
         }
