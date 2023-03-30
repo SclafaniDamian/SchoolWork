@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[61];
+    private String[] options = new String[68];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -69,6 +69,13 @@ public class Driver {
         options[58] = "Selection Sort";
         options[59] = "Calculator";
         options[60] = "Sorting Algorithms";
+        options[61] = "Vending Machine";
+        options[62] = "Triangle";
+        options[63] = "Gas Price";
+        options[64] = "Subtracting Matricies";
+        options[65] = "Zodiac Symbol";
+        options[66] = "Library Points";
+        options[67] = "Word Game";
     }
 
     public void runDriver() {
@@ -318,6 +325,34 @@ public class Driver {
                 case 60:
                     SortingAlgorithms sortingalg = new SortingAlgorithms();
                     sortingalg.SortingAlgorithmsMain();
+                    break;
+                case 61:
+                    lab10 vending = new lab10();
+                    vending.lab10Main();
+                    break;
+                case 62:
+                    Lab11 triangle = new Lab11();
+                    triangle.Lab11Main();
+                    break;
+                case 63:
+                    Lab12 gas = new Lab12();
+                    gas.Lab12Main();
+                    break;
+                case 64:
+                    Lab13 submatrix = new Lab13();
+                    submatrix.Lab13Main();
+                    break;
+                case 65:
+                    Lab7 zodiac = new Lab7();
+                    zodiac.Lab7Main();
+                    break;
+                case 66:
+                    Lab8 library = new Lab8();
+                    library.Lab8Main();
+                    break;
+                case 67:
+                    wordGame wordgame = new wordGame();
+                    wordgame.wordGameMain();
                     break;
             }
         }
