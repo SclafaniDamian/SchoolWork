@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[51];
+    private String[] options = new String[52];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -59,6 +59,7 @@ public class Driver {
         options[48] = "Shapes";
         options[49] = "Process Queue";
         options[50] = "Inheritance";
+        options[51] = "Clock";
     }
 
     public void runDriver() {
@@ -268,6 +269,10 @@ public class Driver {
                 case 50:
                     UgradDemo inheritance = new UgradDemo();
                     inheritance.UgradDemoMain();
+                    break;
+                case 51:
+                    Clock24Tester clock = new Clock24Tester();
+                    clock.Clock24TesterMain();
                     break;
             }
         }
