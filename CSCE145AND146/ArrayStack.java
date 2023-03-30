@@ -49,4 +49,9 @@ public class ArrayStack <T> implements StackI<T> {
 			System.out.println(stack[i]);
 		}
 	}
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'size'");
+	}
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[53];
+    private String[] options = new String[59];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -61,6 +61,12 @@ public class Driver {
         options[50] = "Inheritance";
         options[51] = "Clock";
         options[52] = "Reverse Polish Calculator";
+        options[53] = "Draw A Box";
+        options[54] = "Even In List";
+        options[55] = "Exam Average";
+        options[56] = "Guess The Value";
+        options[57] = "Matrix Multiplication";
+        options[58] = "Selection Sort";
     }
 
     public void runDriver() {
@@ -278,6 +284,30 @@ public class Driver {
                 case 52:
                     ReversePolishCalculatorFrontEnd revpolcalc = new ReversePolishCalculatorFrontEnd();
                     revpolcalc.ReversePolishCalculatorFrontEndMain();
+                    break;
+                case 53:
+                    DrawABox drawabox = new DrawABox();
+                    drawabox.DrawABoxMain();
+                    break;
+                case 54:
+                    EvenInList eveninlist = new EvenInList();
+                    eveninlist.EvenInListMain();
+                    break;
+                case 55:
+                    ExamAverage examaverage = new ExamAverage();
+                    examaverage.EvamAverageMain();
+                    break;
+                case 56:
+                    GuessTheValue guessvalue = new GuessTheValue();
+                    guessvalue.GuessTheValueMain();
+                    break;
+                case 57:
+                    MatrixMultiplication matrixmult = new MatrixMultiplication();
+                    matrixmult.MatrixMultiplicationMain();
+                    break;
+                case 58:
+                    SelectionSort selectsort = new SelectionSort();
+                    selectsort.SelectionSortMain();
                     break;
             }
         }
