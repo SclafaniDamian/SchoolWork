@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[68];
+    private String[] options = new String[69];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -76,6 +76,7 @@ public class Driver {
         options[65] = "Zodiac Symbol";
         options[66] = "Library Points";
         options[67] = "Word Game";
+        options[68] = "Diamond Drawer";
     }
 
     public void runDriver() {
@@ -353,6 +354,10 @@ public class Driver {
                 case 67:
                     wordGame wordgame = new wordGame();
                     wordgame.wordGameMain();
+                    break;
+                case 68:
+                    DiamondDrawer diamond = new DiamondDrawer();
+                    diamond.DiamondDrawerMain();
                     break;
             }
         }
