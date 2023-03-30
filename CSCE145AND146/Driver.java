@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Driver {
     private Scanner scanner;
-    private String[] options = new String[72];
+    private String[] options = new String[73];
 
     public Driver() {
         scanner = new Scanner(System.in);
@@ -88,6 +88,7 @@ public class Driver {
         options[69] = "Animal Inheritance";
         options[70] = "Shape Tree (FILE ERROR)";
         options[71] = "SortSORT";
+        options[72] = "Fruit Tree (FILE ERROR)";
     }
 
     public void runDriver() {
@@ -381,6 +382,10 @@ public class Driver {
                 case 71:
                     sortSorterFE sortSORT = new sortSorterFE();
                     sortSORT.sortSorterFEMain();
+                    break;
+                case 72:
+                    FruitTreeTester fruit = new FruitTreeTester();
+                    fruit.FruitTreeTesterMain();
                     break;
             }
         }
