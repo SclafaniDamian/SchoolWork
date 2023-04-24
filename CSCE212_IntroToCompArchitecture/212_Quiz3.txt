@@ -1,0 +1,8 @@
+Program runs in 60s, multiply operations responsible for 50s. I want 
+a speed up of 3x. Show the "exec time after improvement" formula from
+last time.
+Exec time after improvement = (Exec time affected/Improvement) + Exec time unaffected.
+
+Answer: 
+
+50/3 + 60 = 76.667

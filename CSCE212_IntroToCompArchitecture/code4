@@ -1,0 +1,49 @@
+.data
+	newline: .asciiz "\n"
+	message: .asciiz "Type in a number"
+	message2: .asciiz "Your number will be multiplied by 2"
+	message3: .asciiz "Your new value is: "
+
+.text
+	#print message
+	addi $v0, $zero, 4
+	la $a0, message
+	syscall
+	
+	#ask user for number
+	addi $v0, $zero, 5
+	syscall
+	
+	add $t0, $zero, $v0
+	#move $t0, $v0
+	
+	#print new line
+	addi $v0, $zero, 4
+	la $a0, newline
+	syscall
+	
+	#print message 2
+	addi $v0, $zero, 4
+	la $a0, message2
+	syscall
+	
+	#print new line
+	addi $v0, $zero, 4
+	la $a0, newline
+	syscall
+	
+	#print message 3
+	addi $v0, $zero, 4
+	la $a0, message3
+	syscall
+	
+	#multply number by 2 and print it
+	sll $a0, $t0, 1
+	
+	addi $v0, $zero, 1
+	syscall
+	
+exit:
+	addi $v0, $zero, 10
+	syscall
+	

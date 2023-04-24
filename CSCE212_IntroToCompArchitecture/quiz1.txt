@@ -1,0 +1,15 @@
+Convert the following to a hex instruction
+sub $t1, $s0, $s4
+
+002B4020
+
+
+Convert the following to MIPS
+0x02324022
+
+op			rs		rt		imm
+[000000] [10001] [10010] [0100000000100010]
+0x00		17		18		170
+			$s1		$s2
+
+sub $s2, $s1, $s4

@@ -1,0 +1,29 @@
+.data
+	newline: .asciiz "\n"
+
+.text
+	#print an int
+	#print a newline
+	#print another int
+	
+	li $v0, 1
+	li $a0, 5
+	syscall
+	
+	#this is where we call the function for newline
+	jal nl
+	
+	li $v0, 1
+	li $a0, 10
+	syscall
+
+Exit:
+	li $v0, 10
+	syscall
+	
+nl:
+	#new line code here
+	li $v0, 4
+	la $a0, newline
+	syscall
+	jr $ra
